@@ -5,7 +5,6 @@ import User from "./User.jsx"
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   const [isSidebarExpanded, setSidebarExpanded] = useState(false);
 

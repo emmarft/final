@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  font-family: 'Poppins';
+}
 .App {
   text-align: center;
 }
 
-
-
 .sidebar {
   width: 60px;  
   height: 100vh;
-  background: linear-gradient(to bottom, rgb(99, 206, 255), rgb(64, 255, 64));
+  background: linear-gradient(to bottom, #298de4, #14ce4c);
   color: white;
   position: fixed;
   top: 0;

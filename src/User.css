@@ -1,18 +1,69 @@
 /* User.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 .centered-user {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Cela assure que le composant est centré verticalement sur toute la hauteur de la vue */
-  }
-  
-  .Map {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+  border-radius: 20px;
 }
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+.custom-input {
+  width: 300px; /* ou la largeur que vous préférez */
+  height: 150px;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  border-color: #298de4;
+  position: relative
+}
+
+.placeholder-container {
+  /* Styles pour centrer l'image de manière absolue */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.placeholder {
+  /* Styles pour centrer l'image à l'intérieur du bloc */
+  display: block;
+  margin: 0 auto;
+}
+
+.custom-button {
+  width: 20%;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.custom-input::placeholder {
+  line-height: 1.5;
+}
+
+.button1 {
+  background: linear-gradient(to bottom, #298de4, #14ce4c);
+  border: none;
+  font-family: 'Poppins';
+}
+
+.button2 {
+  border: 1px solid #298de4;
+  font-family: 'Poppins';
+}
+  
   /* Ajoutez d'autres styles si nécessaire */
   

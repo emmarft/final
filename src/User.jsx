@@ -1,6 +1,6 @@
-// User.jsx
-import React, { useState } from 'react';
-import './User.css'; // Importez le fichier de style
+
+import { useState } from 'react';
+import './User.css'; 
 
 const User = () => {
   const [nom, setNom] = useState('');
@@ -8,7 +8,7 @@ const User = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Traitez les données du formulaire ici, par exemple, envoyez-les à un serveur ou effectuez d'autres actions.
+    // Envoi des données vers le serveur. Voir avec l'équipe back/réseau
   };
 
   return (

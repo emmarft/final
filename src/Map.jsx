@@ -1,5 +1,4 @@
-import React, {useEffect, useRef} from 'react'
-import { Wrapper, Status } from "@googlemaps/react-wrapper"
+import React from 'react'
 import {
     MapContainer,
     TileLayer,
@@ -7,38 +6,6 @@ import {
     Popup,
 } from 'react-leaflet'
 
-const MyMap = () => {
-    const render = (status) => {
-        switch (status) {
-            case Status.LOADING:
-                return <p>Loading...</p>
-            case Status.FAILURE:
-                return <p>Failed to load</p>
-            case Status.SUCCESS:
-                return <p>MyMapComponent</p>
-        }
-    };
-
-    return (<>
-        <Wrapper apiKey={AIzaSyB1bRXJXZsNDeeQXyYWA_UnVHrlvX4RxYE} render={render}/>
-    </>)
-}
-
-function MyMapComponent({
-                            center,
-                            zoom,
-                        }) {
-    const ref = useRef();
-
-    useEffect( ()  => {
-        new window.google.maps.Map(ref.current, {
-            center,
-            zoom,
-        });
-    });
-
-    return <div ref={ref} id='map'/>;
-}
 export default function Map () {
     return ( <>
         <MapContainer center={[44.833328, -0.56667]} zoom={13} scrollWheelZoom={false}>

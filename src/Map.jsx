@@ -1,23 +1,34 @@
-import React from 'react'
-import {
-    MapContainer,
-    TileLayer,
-    Marker,
-    Popup,
-} from 'react-leaflet'
+import React, {useEffect, useRef} from "react";
+import { Wrapper,Status } from "@googlemaps/react-wrapper";
+
+const render = (status) => {
+    switch (status) {
+        case Status.LOADING:
+            return <p>Loading...</p>;
+        case Status.FAILURE:
+            return <p>Failed to load map!</p>;
+        case Status.SUCCESS:
+            return <MyMapComponent center={{ lat: 48.8566, lng: 2.3522 }} zoom={10} />;
+    }
+};
 
 export default function Map () {
     return ( <>
-        <MapContainer center={[44.833328, -0.56667]} zoom={13} scrollWheelZoom={false}>
-            <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://%7Bs%7D.tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png"
-            />
-            <Marker position={[51.505, -0.09]}>
-                <Popup>
-                    A pretty CSS3 popup. <br/> Easily customizable.
-                </Popup>
-            </Marker>
-        </MapContainer>
+      <Wrapper apiKey={"AIzaSyB1bRXJXZsNDeeQXyYWA_UnVHrlvX4RxYE"} render={render} />
     </>)
+}
+function MyMapComponent({center, zoom}) {
+    const ref = useRef();
+
+    useEffect(() => {
+        new window.google.maps.Map(ref.current, {
+            center,
+            zoom,
+        });
+    });
+
+    return <div 
+        className="Map"
+        style={{float: "right", height: 635, width: 500, borderRadius: 20}}
+        ref={ref} id="map" />;
 }

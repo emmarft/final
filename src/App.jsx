@@ -17,9 +17,12 @@ function App() {
      <div className={`wrapper ${isSidebarExpanded ? 'expanded' : ''}}`}>
       <div className={`sidebar ${isSidebarExpanded ? 'expanded' : ''}`} onClick={handleSidebarToggle}>
         <div className="icon">&#9776;</div>
+        <img src="/images/6229505.png" alt="Logo Couleur" height={50} color='white'/>
         {isSidebarExpanded && (
           <div className="content">
             <ul>
+            <img src="/images/6229505.png" alt="Logo Couleur" height={50} color='white'/>
+
             <li>Mon compte</li>
             <li>Incident</li>
             <li>Paramètres</li>

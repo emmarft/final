@@ -6,7 +6,10 @@ import './App.css'
 import { Link } from 'react-router-dom';
 
 function App() {
+ Pages
   //const [count, setCount] = useState(0)
+
+ main
 
   const [isSidebarExpanded, setSidebarExpanded] = useState(false);
 

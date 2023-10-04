@@ -8,7 +8,7 @@ const render = (status) => {
         case Status.FAILURE:
             return <p>Failed to load map!</p>;
         case Status.SUCCESS:
-            return <MyMapComponent center={{ lat: 48.8566, lng: 2.3522 }} zoom={10} />;
+            return <MyMapComponent center={{ lat: 44.837789, lng: -0.57918 }} zoom={10} />;
     }
 };
 
@@ -29,6 +29,7 @@ function MyMapComponent({center, zoom}) {
 
     return <div 
         className="Map"
-        style={{float: "right", height: 635, width: 500, borderRadius: 20}}
-        ref={ref} id="map" />;
+        style={{float: "right", height: 635, width: 550, borderRadius: 20}}
+        ref={ref} id="map" 
+        />;
 }

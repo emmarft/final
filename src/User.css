@@ -1,5 +1,9 @@
 /* User.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 .centered-user {
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,6 +17,32 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+
 }
+
+.custom-button {
+  width: 20%;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.custom-input::placeholder {
+  line-height: 1.5;
+}
+
+.button1 {
+  background: linear-gradient(to bottom, #298de4, #14ce4c);
+  border: none;
+  font-family: 'Poppins';
+}
+
+.button2 {
+  border: 1px solid #298de4;
+  font-family: 'Poppins';
+}
+  
   /* Ajoutez d'autres styles si nécessaire */
   

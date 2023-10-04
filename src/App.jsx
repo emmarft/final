@@ -1,15 +1,22 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+//import reactLogo from './assets/react.svg'
 import Map from "./Map.jsx"
 import User from "./User.jsx"
 import './App.css'
+import { Link } from 'react-router-dom';
 
 function App() {
+ Pages
+  //const [count, setCount] = useState(0)
+
+ main
 
   const [isSidebarExpanded, setSidebarExpanded] = useState(false);
 
   const handleSidebarToggle = () => {
+    console.log(isSidebarExpanded);
     setSidebarExpanded(!isSidebarExpanded);
+
   };
 
   return (
@@ -24,13 +31,17 @@ function App() {
             <img src="/images/6229505.png" alt="Logo Couleur" height={50} color='white'/>
 
             <li>Mon compte</li>
+            <li>
+              <Link to= '/Connexion'>Se connecter</Link></li>
             <li>Incident</li>
             <li>Paramètres</li>
+            <li><Link to= '/Inscription'>Créer un compte</Link></li>
+
             </ul>
           </div>
         )}
       </div>
-      {/* Contenu principal de votre application */}
+      {}
       <Map/>
       <User/>
     </div>
@@ -38,5 +49,5 @@ function App() {
   )
 }
 
-export default App
+export default App;
 

@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 .centered-user {
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,6 +38,7 @@
   padding: 10px; /* Ajoutez un peu de rembourrage pour l'espace intérieur */
   min-height: 100px; /* Hauteur minimale */
   max-height: 200px; /* Hauteur maximale si vous souhaitez limiter la hauteur */
+  outline: none;
 }
 
 .custom-input {
@@ -47,6 +47,7 @@
   border-radius: 10px;
   text-align: left;
   border: none;
+  
   /* Ajoutez d'autres styles selon vos préférences */
 }
 

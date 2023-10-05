@@ -56,6 +56,6 @@ function User () {
       <button type="reset" className="custom-button button2">Annuler</button>
     </form>
   );  
-};
+}
 
 export default User;

@@ -23,10 +23,11 @@ function App() {
         {isSidebarExpanded && (
           <div className="content">
             <ul>
-            <li>Mon compte</li>
-            <li><Link to= '/Connexion'>Se connecter</Link></li>
+            
+            <li><Link to= '/Profil'>Mon compte</Link></li>
             <li><Link to= '/User'>Signalement</Link></li>
-            <li><Link to= '/Inscription'>Créer un compte</Link></li>
+            <li><Link to= '/Connexion'>Se connecter</Link></li>
+            <li><Link to= '/Connexion'>Se déconnecter</Link></li>
 
             </ul>
           </div>

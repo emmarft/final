@@ -9,6 +9,8 @@ import Jsp from './Incident';
 //import AlertePage from './Alerte' (./Alerte correspond à la page de déclaration des incidents);
 import Root from './root.jsx';
 import ErrorPage from './pageErreur.jsx';
+import UserProfile from './Profil.jsx';
+import User from './User.jsx';
 
 
 const router = createBrowserRouter([
@@ -32,6 +34,21 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/Profil",
+    element: <UserProfile />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/pageErreur",
+    element: <ErrorPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/User",
+    element: <User />,
     errorElement: <ErrorPage />,
   },
 ]);

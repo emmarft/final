@@ -105,7 +105,7 @@ function SignupForm() {
           </div>
 
           <button className="login-button" type="submit">
-            <Link to='Alerte'>Créer un compte</Link>
+            <Link to='/User'>Créer un compte</Link>
           </button> 
         </form>
       </div>

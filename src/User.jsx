@@ -26,13 +26,23 @@ function User () {
     }
   };
 
+  const fileInputRef = useRef(null);
+
+  const handleImageClick = () => {
+    fileInputRef.current.click();
+  };
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    // Faites quelque chose avec le fichier, par exemple, l'envoyer au serveur ou le traiter côté client
+  };
+
   return (
     <form className="centered-user" onSubmit={handleSubmit}>
       <img src="/images/logo-couleur.png" alt="Logo Couleur" height={100}/>
       <div className="input-container">
         <div
-          contentEditable
-          onInput={handleInput}
+          onClick={handleImageClick}
           className="custom-input"
         >
           <div className="placeholder-container">
@@ -40,6 +50,13 @@ function User () {
             {prenom}
           </div>
         </div>
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept="image/*"
+          style={{ display: 'none' }}
+          onChange={handleFileChange}
+        />
       </div>
       <div className="input-container2">
         <div

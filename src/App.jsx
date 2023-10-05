@@ -29,7 +29,7 @@ function App() {
             style={{ width: '30px' }}
 
           />
-          {isSidebarExpanded && <span>&nbsp; Mon compte</span>}
+          {isSidebarExpanded && <Link to='/Connexion'> &nbsp; Mon compte</Link>}
         </li>
         <li>
           <img

@@ -19,8 +19,7 @@ function LoginPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Ne pas oublier d'ajouter la logique de traitement des données du formulaire de connexion. 
-    //Si tu as une idée n'hésites pas.
+        
     console.log(formData);
   };
 

@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Profil.css';
 import './Connexion.css'; 
 
-const UserProfile = () => {
+function UserProfile() {
   const [user] = useState({
     username: 'EPSI_B3_G4',
     email: 'G4@gmail.com',

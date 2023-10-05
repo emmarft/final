@@ -41,13 +41,13 @@ function User () {
           </div>
         </div>
       </div>
-      <div className="input-container">
+      <div className="input-container2">
         <div
           ref={contentEditableRef}
           contentEditable
           onFocus={clearPlaceholder}
           onInput={handleInputChange}
-          className="custom-input content-editable-container"
+          className="custom-input"
           >
           Décrivez en quelques lignes la situation...
         </div>

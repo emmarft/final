@@ -15,7 +15,7 @@ import User from './User.jsx';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/App",
     element: <App />,
   },
   {

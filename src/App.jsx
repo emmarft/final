@@ -30,7 +30,7 @@ function App() {
             style={{ width: '30px' }}
 
           />
-          {isSidebarExpanded && <Link to='/Connexion'> &nbsp; Mon compte</Link>}
+          {isSidebarExpanded && <Link to='/Profil'> &nbsp; Mon compte</Link>}
         </li>
         <li>
           <img
@@ -51,11 +51,10 @@ function App() {
         {/* Ajoutez d'autres logos ici */}
       </ul>
     </div>
-  </div>
-  
-      {}
-      <Map/>
-      <User/>
+    </div>
+    {}
+    <Map/>
+    <User/>
     </div>
 
    </>

@@ -1,5 +1,8 @@
 import { useState, useRef } from 'react';
 import './User.css'; 
+import { Link } from 'react-router-dom';
+import './App';
+
 
 
 function User () {
@@ -34,7 +37,6 @@ function User () {
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
-    // Faites quelque chose avec le fichier, par exemple, l'envoyer au serveur ou le traiter côté client
   };
 
   return (
@@ -69,9 +71,11 @@ function User () {
           Décrivez en quelques lignes la situation...
         </div>
       </div>
-      <button type="submit" className="custom-button button1">Valider</button>
+      <button type="submit" className="custom-button button1"><Link to='/App'>Valider</Link></button>
       <button type="reset" className="custom-button button2">Annuler</button>
+      
     </form>
+    
   );  
 }
 

@@ -1,57 +1,50 @@
-import  { Component } from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Profil.css';
 
-class UserProfile extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      user: {
-        username: 'EPSI_B3_G4',
-        email: 'G4@gmail.com',
-        
-      },
-      alerts: [
-        {
-          id: 1,
-          message: 'Feux tricolores',
-          date: '2023-10-04',
-        },
-        {
-          id: 2,
-          message: 'Dégats des eaux',
-          date: '2023-10-05',
-        },
-        
-      ],
-    };
-  }
+function UserProfile() {
+  const [user] = useState({
+    username: 'EPSI_B3_G4',
+    email: 'G4@gmail.com',
+  });
 
-  render() {
-    const { user, alerts } = this.state;
+  const [alerts] = useState([
+    {
+      id: 1,
+      message: 'Feux tricolores',
+      date: '2023-10-04',
+    },
+    {
+      id: 2,
+      message: 'Dégats des eaux',
+      date: '2023-10-05',
+    },
+  ]);
 
-    return (
+  return (
+    <div>
+      <h1>Profil utilisateur</h1>
       <div>
-        <h1>Profil utilisateur</h1>
-        <div>
-          <h2>Paramètres du compte</h2>
-          <p>Nom d'utilisateur : {user.username}</p>
-          <p>Email : {user.email}</p>
-          {/* Affichez d'autres paramètres du compte ici */}
-        </div>
-        <div>
-          <h2>Historique des alertes</h2>
-          <ul>
-            {alerts.map((alert) => (
-              <li key={alert.id}>
-                {alert.message} (Date : {alert.date})
-              </li>
-            ))}
-          </ul>
-        </div>
-        
+        <h2>Paramètres du compte</h2>
+        <p>Nom d'utilisateur : {user.username}</p>
+        <p>Email : {user.email}</p>
+        {/* Affichez d'autres paramètres du compte ici */}
       </div>
-    );
-  }
+      <div>
+        <h2>Historique des alertes</h2>
+        <ul>
+          {alerts.map((alert) => (
+            <li key={alert.id}>
+              {alert.message} (Date : {alert.date})
+            </li>
+          ))}
+        </ul>
+      </div>
+      <button className="login-button" type="submit">
+        <Link to='/Connexion'>Supprimez votre compte</Link>
+      </button>
+    </div>
+  );
 }
 
 export default UserProfile;

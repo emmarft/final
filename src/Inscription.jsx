@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './Inscription.css'; 
+import './Connexion'; 
 //import AlertePage from './Alerte' (./alerte correspond à la page de déclaration des incidents);
 
 import { Link } from 'react-router-dom';
@@ -28,88 +28,87 @@ function SignupForm() {
   };
 
   return (
-    <div className="form-container">
-      <h2>Créez un compte !</h2>
-      <form onSubmit={handleSubmit}>
-        
-        <div className="form-group">
-          <label htmlFor="username">Nom</label>
+    <div className="login-page">
+      <div className="login-form">
+      <img src="/images/logo-couleur.png" alt="Logo Couleur" height={150}/>
+        <form onSubmit={handleSubmit}>
           
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        
-        <div className="form-group">
-          <label htmlFor="username">Prénom</label>
+          <div className="form-group">          
+            <input
+              type="email"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Nom"
+              required
+            />
+          </div>
           
-          <input
-            type="text"
-            id="lastname"
-            name="lastname"
-            value={formData.lastname}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="username">Pseudo</label>
-          
-          <input
-            type="text"
-            id="username"
-            name="username"
-            value={formData.username}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div className="form-group">          
+            <input
+              type="email"
+              id="lastname"
+              name="lastname"
+              value={formData.lastname}
+              onChange={handleChange}
+              placeholder="Prénom"
+              required
+            />
+          </div>
+          <div className="form-group">          
+            <input
+              type="email"
+              id="username"
+              name="username"
+              value={formData.username}
+              onChange={handleChange}
+              placeholder="Pseudo"
+              required
+            />
+          </div>
 
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div className="form-group">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Email"
+              required
+            />
+          </div>
 
-        <div className="form-group">
-          <label htmlFor="password">Mot de passe</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div className="form-group">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              placeholder="Mot de passe"
+              required
+            />
+          </div>
 
-        <div className="form-group">
-          <label htmlFor="confirmPassword">Confirmer le mot de passe</label>
-          <input
-            type="password"
-            id="confirmPassword"
-            name="confirmPassword"
-            value={formData.confirmPassword}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div className="form-group">
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              value={formData.confirmPassword}
+              onChange={handleChange}
+              placeholder="Confirmer le mot de passe"
+              required
+            />
+          </div>
 
-        <button className="form-button" type="submit">
-          <Link to='Alerte'>Créer un compte</Link>
-        </button> 
-      </form>
+          <button className="login-button" type="submit">
+            <Link to='Alerte'>Créer un compte</Link>
+          </button> 
+        </form>
+      </div>
     </div>
   );
 }

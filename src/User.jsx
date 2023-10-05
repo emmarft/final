@@ -1,10 +1,8 @@
- Pages
-
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import './User.css'; 
 
 
-const User = () => {
+function User () {
   const [nom, setNom] = useState('');
   const [prenom, setPrenom] = useState('');
   const contentEditableRef = useRef(null);
@@ -35,7 +33,7 @@ const User = () => {
         <div
           contentEditable
           onInput={handleInput}
-          className={`custom-input ${prenom ? 'has-content' : ''}`}
+          className="custom-input"
         >
           <div className="placeholder-container">
             {!prenom && <img className="placeholder" src="/images/app-photo.png" alt="Placeholder" height={50} />}
@@ -49,8 +47,8 @@ const User = () => {
           contentEditable
           onFocus={clearPlaceholder}
           onInput={handleInputChange}
-          className="custom-input"
-        >
+          className="custom-input content-editable-container"
+          >
           Décrivez en quelques lignes la situation...
         </div>
       </div>

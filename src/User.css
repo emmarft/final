@@ -20,6 +20,40 @@
 
 }
 
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25%; 
+  width: 40%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc; 
+}
+
+.content-editable-container {
+  text-align: left;
+  white-space: pre-wrap; /* Permettre le retour à la ligne */
+  overflow-y: auto; /* Activer le défilement vertical si le texte dépasse la hauteur spécifiée */
+  border: 1px solid #ccc; /* Ajoutez une bordure si nécessaire */
+  padding: 10px; /* Ajoutez un peu de rembourrage pour l'espace intérieur */
+  min-height: 100px; /* Hauteur minimale */
+  max-height: 200px; /* Hauteur maximale si vous souhaitez limiter la hauteur */
+}
+
+.custom-input {
+  background-color: #fff; /* Couleur de fond du champ d'entrée */
+  color: #333; /* Couleur du texte */
+  border-radius: 10px;
+  text-align: left;
+  border: none;
+  /* Ajoutez d'autres styles selon vos préférences */
+}
+
+.custom-input:focus {
+  outline: none;
+}
+
 .custom-button {
   width: 20%;
   padding: 10px 20px;

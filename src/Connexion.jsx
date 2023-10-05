@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import './LoginPage.css'; 
+import './Connexion.css'; 
 import { Link } from 'react-router-dom';
+
 
 function LoginPage() {
   const [formData, setFormData] = useState({
@@ -26,28 +27,28 @@ function LoginPage() {
   return (
     <div className="login-page">
       <div className="login-form">
-        <h2>Connectez-vous ! </h2>
+        <img src="/images/logo-couleur.png" alt="Logo Couleur" height={150}/>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="email">Email</label>
             <input
               type="email"
               id="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
+              placeholder="Email"
               required
             />
           </div>
 
           <div className="form-group">
-            <label htmlFor="password">Mot de passe</label>
             <input
               type="password"
               id="password"
               name="password"
               value={formData.password}
               onChange={handleChange}
+              placeholder="Mot de passe"
               required
             />
           </div>
@@ -55,6 +56,7 @@ function LoginPage() {
           <button className="login-button" type="submit">
             <Link to ='/Alerte'>Se connecter</Link>
           </button>
+
         </form>
       </div>
     </div>

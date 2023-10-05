@@ -47,6 +47,11 @@ body {
   margin-bottom: 10px;
 }
 
+a {
+  text-decoration: none; /* Supprime le soulignement des liens */
+  color: white; /* Définit la couleur du texte à blanc */
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

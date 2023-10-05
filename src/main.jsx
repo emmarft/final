@@ -12,10 +12,9 @@ import ErrorPage from './pageErreur.jsx';
 import UserProfile from './Profil.jsx';
 import User from './User.jsx';
 
-
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/App",
     element: <App />,
   },
   {

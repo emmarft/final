@@ -1,7 +1,6 @@
 import { useState, useRef } from 'react';
 import './User.css'; 
 
-
 function User () {
   const [nom, setNom] = useState('');
   const [prenom, setPrenom] = useState('');

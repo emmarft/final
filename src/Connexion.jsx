@@ -54,9 +54,9 @@ function LoginPage() {
           </div>
 
           <button className="login-button" type="submit">
-            <Link to ='/User'>Se connecter</Link>
+            <Link to ='/App'>Se connecter</Link>
           </button>
-          <p>Pas encore membre ? <Link style={{color:'black'}}to ='/Inscription'>Inscrivez-vous ! </Link></p>
+          <p>Pas encore membre ? <Link className="orange" to ='/Inscription'>Inscrivez-vous ! </Link></p>
 
         </form>
       </div>

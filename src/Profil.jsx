@@ -1,38 +1,31 @@
-import  { Component } from 'react';
+import React, { useState } from 'react';
 import './Profil.css';
+import './Connexion.css'; 
 
-class UserProfile extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      user: {
-        username: 'EPSI_B3_G4',
-        email: 'G4@gmail.com',
-        
-      },
-      alerts: [
-        {
-          id: 1,
-          message: 'Feux tricolores',
-          date: '2023-10-04',
-        },
-        {
-          id: 2,
-          message: 'Dégats des eaux',
-          date: '2023-10-05',
-        },
-        
-      ],
-    };
-  }
+const UserProfile = () => {
+  const [user] = useState({
+    username: 'EPSI_B3_G4',
+    email: 'G4@gmail.com',
+  });
 
-  render() {
-    const { user, alerts } = this.state;
+  const [alerts] = useState([
+    {
+      id: 1,
+      message: 'Feux tricolores',
+      date: '2023-10-04',
+    },
+    {
+      id: 2,
+      message: 'Dégâts des eaux',
+      date: '2023-10-05',
+    },
+  ]);
 
-    return (
-      <div>
+  return (
+    <div className="login-page">
+      <div className='login-form'>
         <h1>Profil utilisateur</h1>
-        <div>
+        <div className='form-group'>
           <h2>Paramètres du compte</h2>
           <p>Nom d'utilisateur : {user.username}</p>
           <p>Email : {user.email}</p>
@@ -48,10 +41,9 @@ class UserProfile extends Component {
             ))}
           </ul>
         </div>
-        
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default UserProfile;

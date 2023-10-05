@@ -27,8 +27,8 @@
   width: 40%;
   margin-bottom: 20px;
   border-radius: 10px;
-  border: #ccc; 
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid #ccc; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -39,8 +39,8 @@
   padding: 2%;
   margin-bottom: 20px;
   border-radius: 10px;
-  border: #ccc; 
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid #ccc; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .custom-input {

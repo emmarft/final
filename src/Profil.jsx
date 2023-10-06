@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import './Profil.css';
 import './Connexion.css'; 
+
+//get data from database
 
 function UserProfile() {
   const [user] = useState({
@@ -28,7 +30,7 @@ function UserProfile() {
         <h1>Profil utilisateur</h1>
         <div className='form-group'>
           <h2>Paramètres du compte</h2>
-          <p>Nom d'utilisateur : {user.username}</p>
+          <p>Nom d &apos utilisateur : {user.username}</p>
           <p>Email : {user.email}</p>
           {/* Affichez d'autres paramètres du compte ici */}
         </div>
@@ -45,6 +47,6 @@ function UserProfile() {
       </div>
     </div>
   );
-};
+}
 
 export default UserProfile;

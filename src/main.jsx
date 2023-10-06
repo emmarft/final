@@ -7,7 +7,6 @@ import SignupForm from './Inscription';
 import LoginPage from './Connexion';
 import Jsp from './Incident';
 //import AlertePage from './Alerte' (./Alerte correspond à la page de déclaration des incidents);
-import Root from './root.jsx';
 import ErrorPage from './pageErreur.jsx';
 import UserProfile from './Profil.jsx';
 import User from './User.jsx';
@@ -32,7 +31,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/",
-    element: <Root />,
+    element: <LoginPage />,
     errorElement: <ErrorPage />,
   },
   {

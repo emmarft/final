@@ -29,7 +29,13 @@ function MyMapComponent({center, zoom}) {
 
     return <div 
         className="Map"
-        style={{float: "right", height: 635, width: 550, borderRadius: 20}}
+        style={{
+            float: "right",
+            height: 635,
+            width: 550,
+            borderRadius: 20,
+            boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)" // La propriété boxShadow avec un "S" majuscule
+          }}
         ref={ref} id="map" 
         />;
 }

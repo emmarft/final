@@ -19,8 +19,7 @@ function LoginPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Ne pas oublier d'ajouter la logique de traitement des données du formulaire de connexion. 
-    //Si tu as une idée n'hésites pas.
+        
     console.log(formData);
   };
 
@@ -54,8 +53,9 @@ function LoginPage() {
           </div>
 
           <button className="login-button" type="submit">
-            <Link to ='/Alerte'>Se connecter</Link>
+            <Link to ='/App'>Se connecter</Link>
           </button>
+          <p>Pas encore membre ? <Link className="orange" to ='/Inscription'>Inscrivez-vous ! </Link></p>
 
         </form>
       </div>

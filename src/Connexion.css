@@ -68,4 +68,14 @@ body {
   .login-button a:hover {
     text-decoration: underline;
   }
+
+  .orange {
+    color: black;
+    text-decoration: none; /* Enlève le soulignement par défaut des liens */
+    transition: color 0.3s ease; /* Ajoute une transition pour un effet fluide */
+  }
   
+  .orange:hover {
+    color: #DD7F27;
+    cursor: pointer;
+  }

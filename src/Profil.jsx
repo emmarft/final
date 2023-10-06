@@ -1,24 +1,50 @@
-//import React from 'react';
-import './Profil.css'; // Assurez-vous de spécifier le bon chemin vers votre fichier CSS
+import { useState } from 'react';
+//import { Link } from 'react-router-dom';
+import './Profil.css';
+import './Connexion.css'; 
+
+//get data from database
 
 function UserProfile() {
-  const user = {
-    username: 'utilisateur123',
-    description: 'Bienvenue sur mon profil !',
-    profileImage: 'https://via.placeholder.com/150', // URL de l'image de profil (à remplacer)
-  };
+  const [user] = useState({
+    username: 'EPSI_B3_G4',
+    email: 'G4@gmail.com',
+  });
+
+  const [alerts] = useState([
+    {
+      id: 1,
+      message: 'Feux tricolores',
+      date: '2023-10-04',
+    },
+    {
+      id: 2,
+      message: 'Dégâts des eaux',
+      date: '2023-10-05',
+    },
+  ]);
 
   return (
-    <div className="user-profile">
-      <div className="profile-header">
-        <img
-          src={user.profileImage}
-          alt="Image de profil"
-          className="profile-image"
-        />
-        <h2 className="username">{user.username}</h2>
+    <div className="login-page">
+      <div className='login-form'>
+        <h1>Profil utilisateur</h1>
+        <div className='form-group'>
+          <h2>Paramètres du compte</h2>
+          <p>Nom d &apos utilisateur : {user.username}</p>
+          <p>Email : {user.email}</p>
+          {/* Affichez d'autres paramètres du compte ici */}
+        </div>
+        <div>
+          <h2>Historique des alertes</h2>
+          <ul>
+            {alerts.map((alert) => (
+              <li key={alert.id}>
+                {alert.message} (Date : {alert.date})
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-      <p className="description">{user.description}</p>
     </div>
   );
 }

@@ -20,6 +20,7 @@ body {
   align-items: center;
   cursor: pointer;
   transition: width 0.3s ease;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar.expanded {
@@ -34,17 +35,25 @@ body {
   font-size: 48px;
 }
 
-.content {
-  font-size: 20px;
-}
-
+/* Dans votre fichier de styles CSS */
 .content ul {
   list-style: none;
   padding: 0;
 }
 
-.content li {
-  margin-bottom: 10px;
+.content ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px; /* Espacement entre chaque élément de la liste */
+}
+
+/* Styles pour les liens */
+.content ul li a {
+  text-decoration: none;
+}
+
+.last-logo-expanded {
+  margin-right: 10px; /* Ajoutez la marge seulement lorsque la barre est dépliée */
 }
 
 a {
